@@ -66,7 +66,7 @@
             this.sum.TabIndex = 3;
             this.sum.Text = "+";
             this.sum.UseVisualStyleBackColor = true;
-            this.sum.Click += new System.EventHandler(this.sum_Click);
+            this.sum.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // minus
             // 
@@ -76,7 +76,7 @@
             this.minus.TabIndex = 4;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
-            this.minus.Click += new System.EventHandler(this.minus_Click);
+            this.minus.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // multiply
             // 
@@ -86,7 +86,7 @@
             this.multiply.TabIndex = 5;
             this.multiply.Text = "*";
             this.multiply.UseVisualStyleBackColor = true;
-            this.multiply.Click += new System.EventHandler(this.multiply_Click);
+            this.multiply.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // division
             // 
@@ -96,7 +96,7 @@
             this.division.TabIndex = 6;
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = true;
-            this.division.Click += new System.EventHandler(this.division_Click);
+            this.division.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // Form1
             // 

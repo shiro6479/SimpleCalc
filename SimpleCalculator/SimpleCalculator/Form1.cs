@@ -16,44 +16,37 @@ namespace SimpleCalculator
         {
             InitializeComponent();
         }
-        private void sum_Click(object sender, EventArgs e)
-        {
-            string FirstNumString = textBoxFirstIn.Text;
-            double FirstNum = Convert.ToDouble(FirstNumString);
-            string SecondNumString = textBoxSecondIn.Text;
-            double SecondNum = Convert.ToDouble(SecondNumString);
-            double Result = FirstNum + SecondNum;
-            textBoxOut.Text = Result.ToString();
-        }
+        
 
-        private void minus_Click(object sender, EventArgs e)
+        private void button4_Click_1(object sender, EventArgs e)
         {
+            double Result;
             string FirstNumString = textBoxFirstIn.Text;
             double FirstNum = Convert.ToDouble(FirstNumString);
             string SecondNumString = textBoxSecondIn.Text;
             double SecondNum = Convert.ToDouble(SecondNumString);
-            double Result = FirstNum - SecondNum;
-            textBoxOut.Text = Result.ToString();
-        }
+            switch (((Button)sender).Name)
+            {
+                case "sum":
+                    Result = FirstNum + SecondNum;
+                    textBoxOut.Text = Result.ToString();
+                    break;
+                case "minus":
+                    Result = FirstNum - SecondNum;
+                    textBoxOut.Text = Result.ToString();
+                    break;
+                case "multiply":
+                    Result = FirstNum * SecondNum;
+                    textBoxOut.Text = Result.ToString();
+                    break;
+                case "division":
+                    Result = FirstNum / SecondNum;
+                    textBoxOut.Text = Result.ToString();
+                    break;
+                default:
+                    throw new Exception("Неизвестная операция");
 
-        private void multiply_Click(object sender, EventArgs e)
-        {
-            string FirstNumString = textBoxFirstIn.Text;
-            double FirstNum = Convert.ToDouble(FirstNumString);
-            string SecondNumString = textBoxSecondIn.Text;
-            double SecondNum = Convert.ToDouble(SecondNumString);
-            double Result = FirstNum * SecondNum;
-            textBoxOut.Text = Result.ToString();
-        }
-
-        private void division_Click(object sender, EventArgs e)
-        {
-            string FirstNumString = textBoxFirstIn.Text;
-            double FirstNum = Convert.ToDouble(FirstNumString);
-            string SecondNumString = textBoxSecondIn.Text;
-            double SecondNum = Convert.ToDouble(SecondNumString);
-            double Result = FirstNum / SecondNum;
-            textBoxOut.Text = Result.ToString();
+            }
         }
     }
 }
