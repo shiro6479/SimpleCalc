@@ -1,4 +1,5 @@
 ﻿
+using System;
 using NUnit.Framework;
 using SimpleCalculator.TwoArguments;
 
@@ -15,6 +16,13 @@ namespace SimpleCalculator.Tests.TwoArguments
             var calculator = new Division();
             var actualResult = calculator.Calculate(firstValue, secondValue);
             Assert.AreEqual(expected, actualResult);
+        }
+        [Test]
+        public void CalculateTest()
+        {
+            ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate("division");
+            Assert.Throws<Exception>(() => calculator.Calculate(2, 0));
+
         }
     }
 }
