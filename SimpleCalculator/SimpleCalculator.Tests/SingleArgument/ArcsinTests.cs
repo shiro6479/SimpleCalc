@@ -6,12 +6,13 @@ namespace SimpleCalculator.Tests.SingleArgument
     [TestFixture]
     class ArcsinTests
     {
-        [Test]
-        public void SingleCalculate()
+        [TestCase(0.5, 0.5235987)]
+        [TestCase(0.3, 0.3046926)]
+        public void CalculateTest(double value, double expected)
         {
-            ISingleArgumentCalculatorcs singlecalculator = SingleArgumentFactory.CreateSingleCalculate("arcsin");
-            double result = singlecalculator.SingleCalculate(0.5);
-            Assert.AreEqual(0.5235987, result, 0.0001);
+            var calculator = new Arcsin();
+            var actualResult = calculator.SingleCalculate(value);
+            Assert.AreEqual(expected, actualResult, 0.0001);
         }
     }
 }

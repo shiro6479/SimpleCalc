@@ -6,12 +6,14 @@ namespace SimpleCalculator.Tests.TwoArguments
     [TestFixture]
     public class SumTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(24, 3, 27)]
+        [TestCase(3.3, 4.5, 7.8)]
+        [TestCase(-5, -3, -8)]
+        public void CalculateTest(double firstValue, double secondValue, double expected)
         {
-            ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate("sum");
-            double result = calculator.Calculate(16, 2);
-            Assert.AreEqual(18, result);
+            var calculator = new Sum();
+            var actualResult = calculator.Calculate(firstValue, secondValue);
+            Assert.AreEqual(expected, actualResult);
         }
     }
 }

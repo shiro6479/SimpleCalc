@@ -5,12 +5,14 @@ namespace SimpleCalculator.Tests.TwoArguments
 {
     class MultiplyTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(55, 2, 110)]
+        [TestCase(3, 3, 9)]
+        [TestCase(24, 4, 96)]
+        public void CalculateTest(double firstValue, double secondValue, double expected)
         {
-            ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate("multiply");
-            double result = calculator.Calculate(14, 2);
-            Assert.AreEqual(28, result);
+            var calculator = new Multiply();
+            var actualResult = calculator.Calculate(firstValue, secondValue);
+            Assert.AreEqual(expected, actualResult);
         }
     }
 }

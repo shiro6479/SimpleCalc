@@ -7,12 +7,14 @@ namespace SimpleCalculator.Tests.TwoArguments
     [TestFixture]
     class DivisionTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(18, 3, 6)]
+        [TestCase(27, 9, 3)]
+        [TestCase(44, 11, 4)]
+        public void CalculateTest(double firstValue, double secondValue, double expected)
         {
-            ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate("division");
-            double result = calculator.Calculate(4, 4);
-            Assert.AreEqual(1, result);
+            var calculator = new Division();
+            var actualResult = calculator.Calculate(firstValue, secondValue);
+            Assert.AreEqual(expected, actualResult);
         }
     }
 }

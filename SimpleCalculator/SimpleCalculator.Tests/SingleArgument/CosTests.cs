@@ -6,12 +6,14 @@ namespace SimpleCalculator.Tests.SingleArgument
     [TestFixture]
     class CosTests
     {
-        [Test]
-        public void SingleCalculate()
+        [TestCase(0, 1)]
+        [TestCase(1, 0.5403023)]
+        [TestCase(0.3, 0.9553364)]
+        public void CalculateTest(double value, double expected)
         {
-            ISingleArgumentCalculatorcs singlecalculator = SingleArgumentFactory.CreateSingleCalculate("cos");
-            double result = singlecalculator.SingleCalculate(0);
-            Assert.AreEqual(1, result);
+            var calculator = new Cos();
+            var actualResult = calculator.SingleCalculate(value);
+            Assert.AreEqual(expected, actualResult, 0.00001);
         }
     }
 }

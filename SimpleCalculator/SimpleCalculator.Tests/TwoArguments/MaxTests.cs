@@ -6,12 +6,14 @@ namespace SimpleCalculator.Tests.TwoArguments
     [TestFixture]
     public class MaxTests
     {
-        [Test]
-        public void CalculateTest()
+        [TestCase(112, 5, 112)]
+        [TestCase(1467, 1466, 1467)]
+        [TestCase(77, 1, 77)]
+        public void CalculateTest(double firstValue, double secondValue, double expected)
         {
-            ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate("max");
-            double result = calculator.Calculate(10, 2);
-            Assert.AreEqual(10, result);
+            var calculator = new Max();
+            var actualResult = calculator.Calculate(firstValue, secondValue);
+            Assert.AreEqual(expected, actualResult);
         }
     }
 }

@@ -6,12 +6,14 @@ namespace SimpleCalculator.Tests.SingleArgument
     [TestFixture]
     class SqrtRootTests
     {
-        [Test]
-        public void SingleCalculate()
+        [TestCase(4, 2)]
+        [TestCase(144, 12)]
+        [TestCase(16, 4)]
+        public void CalculateTest(double value, double expected)
         {
-            ISingleArgumentCalculatorcs singlecalculator = SingleArgumentFactory.CreateSingleCalculate("root");
-            double result = singlecalculator.SingleCalculate(9);
-            Assert.AreEqual(3, result);
+            var calculator = new SqrtRoot();
+            var actualResult = calculator.SingleCalculate(value);
+            Assert.AreEqual(expected, actualResult);
         }
     }
 }
