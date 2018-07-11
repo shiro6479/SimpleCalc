@@ -6,12 +6,13 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    public class Minus : ITwoArgumentsCalculator
+    public class Arcsin : ISingleArgumentCalculatorcs
     {
-        public double Calculate(double firstArgument, double secondArgument)
+        
+        public double SingleCalculate(double argument)
         {
-            return firstArgument - secondArgument;
+            return Math.Asin(argument);
         }
-    
+
     }
 }

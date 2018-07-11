@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    public interface ITwoArgumentsCalculator
+    public interface ISingleArgumentCalculatorcs
     {
-        double Calculate(double firstArgument, double secondArgument);
+        double SingleCalculate(double argument);
     }
 }

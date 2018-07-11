@@ -29,7 +29,16 @@ namespace SimpleCalculator
             textBoxOut.Text = result.ToString();
 
         }
+
+        private void Single_Click(object sender, EventArgs e)
+        {
+            string argumentString = textBoxFirstIn.Text;
+            double argument = Convert.ToDouble(argumentString);
+            ISingleArgumentCalculatorcs singlecalculator = SingleArgumentFactory.CreateSingleCalculate(((Button)sender).Name);
+            double result = singlecalculator.SingleCalculate(argument);
+            textBoxOut.Text = result.ToString();
         }
+    }
     }
 
 

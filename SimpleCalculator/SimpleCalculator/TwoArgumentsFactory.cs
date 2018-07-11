@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SimpleCalculator
 {
-    class TwoArgumentsFactory
+    public class TwoArgumentsFactory
     {
         public static ITwoArgumentsCalculator CreateCalculate(string name)
         {
