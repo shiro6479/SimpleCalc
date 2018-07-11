@@ -22,6 +22,8 @@ namespace SimpleCalculator
 
         private void button4_Click_1(object sender, EventArgs e)
         {
+            try
+            {
             string firstArgumentString = textBoxFirstIn.Text;
             double firstArgument = Convert.ToDouble(firstArgumentString);
             string secondArgumentString = textBoxSecondIn.Text;
@@ -29,16 +31,28 @@ namespace SimpleCalculator
             ITwoArgumentsCalculator calculator = TwoArgumentsFactory.CreateCalculate(((Button)sender).Name);
             double result = calculator.Calculate(firstArgument, secondArgument);
             textBoxOut.Text = result.ToString();
+            }
+            catch (Exception two)
+            {
+                textBoxOut.Text = two.Message;
+            }
 
         }
 
         private void Single_Click(object sender, EventArgs e)
         {
+            try
+            {
             string argumentString = textBoxFirstIn.Text;
             double argument = Convert.ToDouble(argumentString);
             ISingleArgumentCalculatorcs singlecalculator = SingleArgumentFactory.CreateSingleCalculate(((Button)sender).Name);
             double result = singlecalculator.SingleCalculate(argument);
             textBoxOut.Text = result.ToString();
+            }
+            catch (Exception single)
+            {
+                textBoxOut.Text = single.Message;
+            }
         }
     }
     }
