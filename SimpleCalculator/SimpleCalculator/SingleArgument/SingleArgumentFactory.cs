@@ -3,8 +3,16 @@ using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator.SingleArgument
 {
+    /// <summary>
+    /// factory, that choses a single argument calculating class by its name
+    /// </summary>
     public class SingleArgumentFactory
     {
+        /// <summary>
+        /// method, that choses a single argument calculating class by its name
+        /// </summary>
+        /// <param name="name"></param>
+        /// <returns>SqrtRoot() or Sin() or Cos() or Tan() or Arcsin()</returns>
         public static ISingleArgumentCalculatorcs CreateSingleCalculate(string name)
         {
             switch (name)

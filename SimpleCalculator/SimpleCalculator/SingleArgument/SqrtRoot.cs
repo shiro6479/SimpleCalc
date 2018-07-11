@@ -4,7 +4,12 @@ namespace SimpleCalculator.SingleArgument
 {
     public class SqrtRoot : ISingleArgumentCalculatorcs
             {
-                public double SingleCalculate(double argument)
+                /// <summary>
+                /// method, that calculates sqrt(argument)
+                /// </summary>
+                /// <param name="argument"></param>
+                /// <returns>Math.Sqrt(argument)</returns>
+        public double SingleCalculate(double argument)
             {
             if (argument < 0)
                 {

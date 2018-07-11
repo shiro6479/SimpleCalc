@@ -4,7 +4,13 @@ namespace SimpleCalculator.TwoArguments
 {
     public class Division : ITwoArgumentsCalculator
     {
-         public double Calculate(double firstArgument, double secondArgument)
+        /// <summary>
+        /// method, that returns quotient of two numbers
+        /// </summary>
+        /// <param name="firstArgument"></param>
+        /// <param name="secondArgument"></param>
+        /// <returns>firstArgument / secondArgument</returns>
+        public double Calculate(double firstArgument, double secondArgument)
             {
             if (secondArgument == 0)
                 {
