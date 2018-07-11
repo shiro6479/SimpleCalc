@@ -16,5 +16,46 @@ namespace SimpleCalculator
         {
             InitializeComponent();
         }
+        private void sum_Click(object sender, EventArgs e)
+        {
+            string FirstNumString = textBoxFirstIn.Text;
+            double FirstNum = Convert.ToDouble(FirstNumString);
+            string SecondNumString = textBoxSecondIn.Text;
+            double SecondNum = Convert.ToDouble(SecondNumString);
+            double Result = FirstNum + SecondNum;
+            textBoxOut.Text = Result.ToString();
+        }
+
+        private void minus_Click(object sender, EventArgs e)
+        {
+            string FirstNumString = textBoxFirstIn.Text;
+            double FirstNum = Convert.ToDouble(FirstNumString);
+            string SecondNumString = textBoxSecondIn.Text;
+            double SecondNum = Convert.ToDouble(SecondNumString);
+            double Result = FirstNum - SecondNum;
+            textBoxOut.Text = Result.ToString();
+        }
+
+        private void multiply_Click(object sender, EventArgs e)
+        {
+            string FirstNumString = textBoxFirstIn.Text;
+            double FirstNum = Convert.ToDouble(FirstNumString);
+            string SecondNumString = textBoxSecondIn.Text;
+            double SecondNum = Convert.ToDouble(SecondNumString);
+            double Result = FirstNum * SecondNum;
+            textBoxOut.Text = Result.ToString();
+        }
+
+        private void division_Click(object sender, EventArgs e)
+        {
+            string FirstNumString = textBoxFirstIn.Text;
+            double FirstNum = Convert.ToDouble(FirstNumString);
+            string SecondNumString = textBoxSecondIn.Text;
+            double SecondNum = Convert.ToDouble(SecondNumString);
+            double Result = FirstNum / SecondNum;
+            textBoxOut.Text = Result.ToString();
+        }
     }
 }
+
+
