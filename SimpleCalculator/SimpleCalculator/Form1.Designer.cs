@@ -112,6 +112,7 @@
             this.max.TabIndex = 7;
             this.max.Text = "Max";
             this.max.UseVisualStyleBackColor = true;
+            this.max.Click += new System.EventHandler(this.button4_Click_1);
             // 
             // sin
             // 

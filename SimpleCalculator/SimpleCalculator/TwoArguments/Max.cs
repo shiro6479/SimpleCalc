@@ -1,12 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace SimpleCalculator
+﻿namespace SimpleCalculator.TwoArguments
 {
-    class Max
+
+    public class Max : ITwoArgumentsCalculator
     {
+        
+        public double Calculate(double firstArgument, double secondArgument)
+        {
+            if (firstArgument >= secondArgument)
+            {
+                return firstArgument;
+            }
+            return secondArgument;
+
+        }
     }
 }

@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace SimpleCalculator
+namespace SimpleCalculator.TwoArguments
 {
     public class TwoArgumentsFactory
     {
@@ -20,6 +16,8 @@ namespace SimpleCalculator
                     return new Multiply();
                 case "division":
                     return new Division();
+                case "max":
+                    return new Max();
                 default:
                     throw new Exception("Неизвестная операция");
             }

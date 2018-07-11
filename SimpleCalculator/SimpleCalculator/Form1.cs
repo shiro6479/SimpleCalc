@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SimpleCalculator.SingleArgument;
+using SimpleCalculator.TwoArguments;
 
 namespace SimpleCalculator
 {
